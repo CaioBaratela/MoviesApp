@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/activity_detail_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:scrollbarStyle="outsideInset"
+        tools:context="movies.app.movies.activies.DetailMovieActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:id="@+id/img_poster_detail"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:layout_alignBottom="@+id/img_time_detail"
+                android:layout_alignTop="@+id/txt_detail_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_detail_title"
+                android:text="Nome do filme "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/img_poster_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_genre_detail"
+                android:text="genero"
+                android:textColor="@android:color/darker_gray"
+                android:layout_below="@+id/txt_detail_title"
+                android:layout_alignStart="@+id/txt_detail_title"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_imdb_detail"
+                android:text="Nota imdb: N/A"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_genre_detail"
+                android:layout_alignStart="@+id/txt_genre_detail" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:src="@android:color/darker_gray"
+                android:id="@+id/img_separetor"
+                android:layout_marginStart="5dp"
+                android:layout_alignTop="@+id/txt_imdb_detail"
+                android:layout_toEndOf="@+id/txt_imdb_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_rated_detail"
+                android:text="R"
+                android:layout_marginStart="5dp"
+                android:layout_alignTop="@+id/img_separetor"
+                android:layout_toEndOf="@+id/img_separetor" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:src="@android:color/darker_gray"
+                android:id="@+id/img_separetor2"
+                android:layout_marginStart="5dp"
+                android:layout_alignTop="@+id/txt_rated_detail"
+                android:layout_toEndOf="@+id/txt_rated_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_language_detail"
+                android:text="Portuguese"
+                android:layout_marginStart="5dp"
+                android:layout_alignTop="@+id/img_separetor2"
+                android:layout_toEndOf="@+id/img_separetor2" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/img_time_detail"
+                android:src="@drawable/ic_clock"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_imdb_detail"
+                android:layout_alignStart="@+id/txt_imdb_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_duration_detail"
+                android:text="N/A"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_alignTop="@+id/img_time_detail"
+                android:layout_toEndOf="@+id/img_time_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_date_detail"
+                android:text="30 Jan 2014"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="5dp"
+                android:layout_alignBaseline="@+id/txt_duration_detail"
+                android:layout_alignBottom="@+id/txt_duration_detail"
+                android:layout_toEndOf="@+id/img_calendar" />
+
+
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_date_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_plot"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_director_detail"
+                android:text="Diretor: "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="17dp"
+                android:layout_below="@+id/txt_plot"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_director_name"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_alignBaseline="@+id/txt_director_detail"
+                android:layout_alignBottom="@+id/txt_director_detail"
+                android:layout_toEndOf="@+id/txt_director_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_writers_name"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:layout_alignBaseline="@+id/txt_writers_detail"
+                android:layout_alignBottom="@+id/txt_writers_detail"
+                android:layout_alignStart="@+id/txt_director_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_writers_detail"
+                android:text="Escritor: "
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/txt_director_name"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_stars"
+                android:layout_alignBaseline="@+id/txt_stars_detail"
+                android:layout_alignBottom="@+id/txt_stars_detail"
+                android:layout_alignStart="@+id/txt_writers_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_stars_detail"
+                android:text="Atores: "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/txt_writers_name"
+                android:layout_alignParentStart="true" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_green_dark"
+                app:borderWidth="0dp"
+                android:clickable="true"
+                android:src="@drawable/ic_check"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
+                android:layout_below="@+id/txt_stars"
+                android:layout_alignParentEnd="true" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:borderWidth="0dp"
+                android:clickable="true"
+                android:src="@drawable/ic_delete"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
+                android:layout_below="@+id/txt_stars"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/img_calendar"
+                android:src="@drawable/ic_calendar"
+                android:layout_marginLeft="5dp"
+                android:layout_alignTop="@+id/img_time_detail"
+                android:layout_toEndOf="@+id/txt_duration_detail" />
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>
